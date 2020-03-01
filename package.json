@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "parcel": "^1.12.4",
-    "typescript": "^3.8.2"
+    "typescript": "^3.8.3"
   }
 }

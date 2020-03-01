@@ -1,0 +1,6 @@
+language: nix
+nix: 2.3.2
+
+install:
+  - nix-channel --update nixpkgs https://nixos.org/channels/nixos-19.09
+  - nix-build

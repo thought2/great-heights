@@ -23,8 +23,8 @@ let
   };
 
   yarnModules = yarn2nix.mkYarnModules {
-    name = "draw";
-    pname = "draw";
+    name = "great-heights";
+    pname = "great-heights";
     version = "v0.0.1";
     packageJSON = ./package.json;
     yarnLock = ./yarn.lock;
@@ -32,7 +32,7 @@ let
 
 in pkgs.stdenv.mkDerivation {
 
-  name = "draw";
+  name = "great-heights";
 
   buildInputs = [ yarn yarnPackage ];
 

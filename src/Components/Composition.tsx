@@ -5,6 +5,10 @@ import { Canvas, useFrame, stateContext, useLoader } from "react-three-fiber";
 import * as THREE from "three";
 import { Picture } from "./Picture";
 
+const constants = {
+  countPictures: 6
+};
+
 export const Composition = (props: { textures: Array<THREE.Texture> }) => {
   const [tick, setTick] = useState(0);
 
@@ -14,7 +18,7 @@ export const Composition = (props: { textures: Array<THREE.Texture> }) => {
     speed: number;
   }>>(null);
 
-  const configX = { start: -6, end: 6, n: 6 };
+  const configX = { start: -6, end: 6, n: constants.countPictures };
 
   const configY = { start: -0.5, end: 0.5, n: 1 };
 
@@ -28,7 +32,7 @@ export const Composition = (props: { textures: Array<THREE.Texture> }) => {
         linSpace(configY.start, configY.end, configY.n).map(y => ({
           x,
           y,
-          speed: Math.random()
+          speed: 0.2 + Math.random() * 0.8
         }))
       )
     );
@@ -45,7 +49,7 @@ export const Composition = (props: { textures: Array<THREE.Texture> }) => {
       {grid &&
         grid.map(({ x, y, speed }) => (
           <Picture
-            rotation={tick * 0.001 * speed}
+            rotation={tick * 0.0005 * speed}
             position={[x, y, 0]}
             scale={[1, 1, 1]}
             textures={props.textures}

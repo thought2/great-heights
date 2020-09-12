@@ -9,7 +9,7 @@
     "@types/react-dom": "^16.9.5",
     "@types/three": "^0.103.2",
     "fp-ts": "^2.5.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "react": "^16.0.0",
     "react-dom": "^16.13.0",
     "react-three-fiber": "^4.0.17"
